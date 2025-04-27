@@ -8,6 +8,12 @@ import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
   {
+    ignores: [
+      "vendor/**/*",
+      "node_modules/**/*", // Just in case
+    ],
+  },
+  {
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
     languageOptions: { globals: globals.browser },
