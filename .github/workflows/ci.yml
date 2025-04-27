@@ -53,6 +53,9 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      
+      - name: Install gems
+        run: bundle install
 
       - name: Lint code for consistent style
         run: yarn lint-check
