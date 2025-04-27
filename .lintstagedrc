@@ -1,0 +1,4 @@
+{
+  "*.{js, css, scss, html, json, md, yaml}": "prettier --write",
+  "*.rb": ["rubocop -a", "prettier --write"]
+}

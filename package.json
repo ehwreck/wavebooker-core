@@ -1,0 +1,29 @@
+{
+  "name": "wavebooker-core",
+  "version": "1.0.0",
+  "description": "A yacht management application built on ruby on rails.",
+  "main": "index.js",
+  "repository": "git@github.com:ehwreck/wavebooker-core.git",
+  "author": "Erick Trevino <erick.trevino@cloudlite.io>",
+  "license": "MIT",
+  "scripts": {
+    "pretty": "prettier . --write",
+    "ci": "yarn eslint . && prettier . --check",
+    "format-all": "prettier . --write",
+    "lint-all": "eslint .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.7.0",
+    "@eslint/js": "^9.25.1",
+    "@eslint/json": "^0.12.0",
+    "@eslint/markdown": "^6.4.0",
+    "@prettier/plugin-ruby": "^4.0.4",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
+  }
+}
