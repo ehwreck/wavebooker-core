@@ -1,4 +1,4 @@
 {
-  "*.{js, css, scss, html, json, md, yaml}": "prettier --write",
+  "*.{js, css, scss, html, json, md, yaml}": "yarn eslint --fix, prettier --write",
   "*.rb": ["rubocop -a", "prettier --write"]
 }

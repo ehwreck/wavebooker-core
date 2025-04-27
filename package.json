@@ -8,9 +8,9 @@
   "license": "MIT",
   "scripts": {
     "pretty": "prettier . --write",
-    "ci": "yarn eslint . && prettier . --check",
-    "format-all": "prettier . --write",
-    "lint-all": "eslint .",
+    "ci": "bundle exec rubocop && yarn eslint './**/*.{js,mjs,cjs}' && yarn eslint './**/*.json' && yarn eslint './**/*.md' && yarn eslint './**/*.css' && prettier . --check",
+    "lint-check": "rubocop && yarn eslint . && prettier . --check",
+    "lint-fix": "rubocop -a && yarn eslint . --fix && prettier . --write",
     "prepare": "husky install"
   },
   "devDependencies": {
