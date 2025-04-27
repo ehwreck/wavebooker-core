@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "pretty": "prettier . --write",
-    "ci": "bundle exec rubocop && yarn eslint './**/*.{js,mjs,cjs,json,jsonc,json5,md,css}' && prettier . --check",
+    "ci": "bundle exec rubocop && yarn eslint './**/*.{js,mjs,cjs}' && yarn eslint './**/*.json' && yarn eslint './**/*.md' && yarn eslint './**/*.css' && prettier . --check",
     "lint-check": "rubocop && yarn eslint . && prettier . --check",
     "lint-fix": "rubocop -a && yarn eslint . --fix && prettier . --write",
     "prepare": "husky install"
