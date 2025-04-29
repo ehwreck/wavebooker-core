@@ -60,7 +60,7 @@ jobs:
       - name: Lint code for consistent style
         run: yarn ci
 
-  test:
+  rspec:
     runs-on: ubuntu-latest
 
     # services:
@@ -82,11 +82,11 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Run tests
+      - name: Run RSpec
         env:
           RAILS_ENV: test
           # REDIS_URL: redis://localhost:6379/0
-        run: bin/rails db:test:prepare test test:system
+        run: bundle exec rspec
 
       - name: Keep screenshots from failed system tests
         uses: actions/upload-artifact@v4

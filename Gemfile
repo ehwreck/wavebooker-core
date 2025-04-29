@@ -41,17 +41,19 @@ gem 'thruster', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem 'brakeman', require: false
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
 
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem 'brakeman', require: false
+  gem 'prettier_print'
+  gem 'rspec-rails', '~> 7.0.0'
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem 'rubocop-rails-omakase', require: false
 
   # Prettier - Plugin Ruby
-  gem 'prettier_print'
   gem 'syntax_tree'
   gem 'syntax_tree-haml'
   gem 'syntax_tree-rbs'
@@ -66,4 +68,5 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 6.0'
 end
