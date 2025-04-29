@@ -48,16 +48,15 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
 
   gem 'prettier_print'
+  gem 'rspec-rails', '~> 7.0.0'
+
+  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem 'rubocop-rails-omakase', require: false
 
   # Prettier - Plugin Ruby
   gem 'syntax_tree'
   gem 'syntax_tree-haml'
   gem 'syntax_tree-rbs'
-  
-  gem 'rspec-rails', '~> 7.0.0'
-
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'rubocop-rails-omakase', require: false
 end
 
 group :development do
