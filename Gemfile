@@ -35,7 +35,6 @@ gem 'bootsnap', require: false
 gem 'kamal', require: false
 
 gem 'tailwindcss-ruby', '~> 4.1'
-
 gem 'tailwindcss-rails', '~> 4.2'
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
